@@ -1,4 +1,4 @@
-# <img src="public/icon.svg" width="40" align="center" alt=""> Expense Tracker
+# <img src="public/icon.svg" width="40" align="top" alt=""> Expense Tracker
 
 A personal finance app that runs entirely on your own machine. It started as a replacement for an "Income & Expenses" Google Sheet: a page per month with incoming and outgoing entries, a yearly overview per category, and editable categories. It has since grown trends, search, recurring payments and money-owed tracking.
 
