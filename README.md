@@ -15,7 +15,7 @@ All data lives in one local SQLite file. Nothing is sent anywhere.
 - **Quick add**: saved monthly payments (rent, salary, subscriptions) and frequent ones (lunch, groceries) that you add in one click. Amounts or days that vary are filled in when you add them.
 - **Owed to me**: track money people need to pay back. Repayments reduce the expense they cover instead of counting as income.
 - **Saving vs spending**: categories like Investing and Savings count as saved, not spent.
-- **Import / export**: import CSV files (Google Sheets month sheets or bank exports), and export to Excel or CSV.
+- **Import / export**: import month sheets from one specific Google Sheets layout, and export to Excel or CSV.
 - **Backups**: a copy of the database is made automatically every day.
 
 ## Screenshots
@@ -94,12 +94,15 @@ The Frequent payments page also shows your fixed monthly costs, and flags saved 
 
 ### Importing from Google Sheets
 
+> **Note:** the import is built for one specific personal spreadsheet layout. Other spreadsheets, bank exports and other CSV formats are not supported.
+
+The supported layout is one sheet per month with two side-by-side blocks headed exactly **Incoming** and **Outgoing**. Each block has five columns in this order: date (DD/MM/YYYY), who, description, amount (€) and category.
+
 Export each month sheet with **File → Download → Comma-separated values (.csv)** and select all the files under **Import CSV** on the Data page.
 
-- Sheets with **Incoming** / **Outgoing** blocks are detected automatically. The budget month is taken from the file name (e.g. `Expenses 2026 - March.csv`).
+- The budget month is taken from the file name (e.g. `Expenses 2026 - March.csv`) and can be changed per file.
 - Category names are matched case-insensitively, and unknown ones are created.
 - Entries that already exist are flagged, so re-importing a file is safe.
-- Other CSVs, such as bank exports, can be mapped column by column.
 - An import is all or nothing: if one row fails, nothing is saved.
 
 ## Project structure

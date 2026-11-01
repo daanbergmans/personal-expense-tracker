@@ -176,8 +176,8 @@ export function ImportPage({ categories, onChange }: Props) {
           That exports the current sheet only, so repeat it per month. You can select several files at once.
         </p>
         <p className="muted-text">
-          Sheets with <em>Incoming</em> and <em>Outgoing</em> blocks are recognised automatically. Other CSVs, such as a bank
-          export with one entry per row, can be mapped column by column.
+          Only works for month sheets with an <em>Incoming</em> and an <em>Outgoing</em> block, each with the columns date,
+          who, description, amount and category. Other formats, such as bank exports, are not supported.
         </p>
         <div className="import-controls">
           <label className="btn primary file-btn">
